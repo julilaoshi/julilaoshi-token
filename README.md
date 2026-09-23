@@ -57,7 +57,9 @@ Open the URL printed by the command. Repeating `start` reuses a running service 
 - **Stopping completely:** use `stop` below, then `start` when needed.
 - **File not found:** install first. For a custom installation, use its path and matching `--home` option.
 
-You can also ask Codex:
+**Don’t feel like typing the startup command? Just tell Codex: “Start the Julilaoshi Token service for me.”**
+
+Or copy this more specific request into Codex:
 
 > Run `python3 ~/.local/share/codex-token-meter/meter.py start`, then open its printed local URL in the right-side browser.
 

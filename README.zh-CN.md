@@ -55,7 +55,9 @@ python3 ~/.local/share/codex-token-meter/meter.py start
 - **彻底停止：**运行下方的 `stop`；下次用 `start` 即可恢复。
 - **提示找不到 meter.py：**先按“一键安装”安装。若使用自定义安装目录，请使用对应目录并传入 `--home`。
 
-不熟悉终端，也可以对 Codex 说：
+**如果懒得输代码启动，你就直接跟 Codex 说：“帮我拉起 Julilaoshi Token 的服务。”**
+
+也可以把下面这句完整的话发给 Codex：
 
 > 请运行 `python3 ~/.local/share/codex-token-meter/meter.py start`，然后在右侧浏览器打开它输出的本机地址。
 
