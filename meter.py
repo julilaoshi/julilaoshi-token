@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free lifecycle commands for Codex Token Meter."""
+"""Dependency-free lifecycle commands for Julilaoshi Token."""
 import argparse, json, os, secrets, shutil, subprocess, sys, time, urllib.request
 from pathlib import Path
 
@@ -56,7 +56,7 @@ def serve(args, home):
         if read_state(home)==state:state_path(home).unlink(missing_ok=True)
 
 def main():
-    p=argparse.ArgumentParser(description='Codex Token Meter: local only, no model calls.')
+    p=argparse.ArgumentParser(description='Julilaoshi Token: local only, no model calls.')
     p.add_argument('command',choices=['install','start','status','stop','uninstall','serve'])
     p.add_argument('--home',type=Path,default=Path.home()/'.local/share/codex-token-meter')
     p.add_argument('--port',type=int,default=8793)
@@ -66,7 +66,7 @@ def main():
     home=home.resolve()
     if args.command=='install':
         if home.exists() and (not (home/'.owned').exists() or (home/'.owned').read_text()!=MARKER):
-            raise RuntimeError('Destination is not owned by Token Meter; choose an empty path.')
+            raise RuntimeError('Destination is not owned by Julilaoshi Token; choose an empty path.')
         source=Path(__file__).resolve().parent
         if source==home:raise RuntimeError('Run install from a downloaded release, not the installed directory.')
         for name in FILES:
@@ -116,4 +116,4 @@ def main():
 if __name__=='__main__':
     try:main()
     except (RuntimeError,OSError,subprocess.CalledProcessError) as e:
-        print('Token Meter: '+str(e),file=sys.stderr);sys.exit(1)
+        print('Julilaoshi Token: '+str(e),file=sys.stderr);sys.exit(1)
