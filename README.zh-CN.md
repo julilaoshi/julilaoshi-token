@@ -39,6 +39,28 @@ python3 -c 'import urllib.request, subprocess; subprocess.run(["sh"], input=urll
 
 手动方式：下载并解压 Release ZIP，在目录里执行 `python3 meter.py install`。
 
+## 下次怎么打开？
+
+**安装只需一次。电脑重启后，或页面打不开时，运行下面这一条即可，无需重新安装：**
+
+```sh
+python3 ~/.local/share/codex-token-meter/meter.py start
+```
+
+打开命令输出的地址即可。重复运行 `start` 会复用已运行的服务，不会重复启动多个实例。默认从 8793 起寻找空闲端口，所以请以输出地址为准。
+
+- **关闭再打开 Codex：**服务独立运行，通常仍在；先打开原地址，打不开再执行上面的启动命令。
+- **重启电脑：**服务不会自动启动，需要执行一次上面的命令。不添加登录启动项。
+- **关闭面板：**关闭所有面板标签页后，不再有页面发起的定时统计请求；服务进程仍占用少量内存并等待请求，并非完全退出。
+- **彻底停止：**运行下方的 `stop`；下次用 `start` 即可恢复。
+- **提示找不到 meter.py：**先按“一键安装”安装。若使用自定义安装目录，请使用对应目录并传入 `--home`。
+
+不熟悉终端，也可以对 Codex 说：
+
+> 请运行 `python3 ~/.local/share/codex-token-meter/meter.py start`，然后在右侧浏览器打开它输出的本机地址。
+
+统计服务本身不调用 AI、不消耗模型 token；让 Codex 帮忙操作的对话会按正常规则计入 Codex 用量。
+
 ## 启动、停止、更新和卸载
 
 ```sh
@@ -61,7 +83,7 @@ python3 ~/.local/share/codex-token-meter/meter.py uninstall
 ## 隐私与适用范围
 
 - 正常监控不联网、不调用模型；安装时从 GitHub 下载程序。
-- 只读本机任务元数据和用量记录，不修改 Codex 数据，不向页面返回聊天正文或凭证。
+- 只读本机任务元数据和用量记录，不修改 Codex 数据，不向页面返回完整会话或凭证。任务标题可能含有敏感内容；缺少保存名称时，标题也可能来自首条输入的摘要。分享截图前请检查任务名称。
 - 服务仅监听本机；同机有访问能力的程序仍可能读取页面中的任务标题，不能视为应用间的安全隔离。
 - 可通过 `CODEX_HOME` 指定数据目录；可在启动前设置 `TOKEN_METER_EXCLUDE`，用冒号分隔要排除的私密目录。
 - 只统计本机可读数据，排除子 Agent；归档任务可以进入排行。云端独有任务及其他电脑数据不在范围内。
@@ -97,4 +119,4 @@ python3 meter.py stop --home /tmp/token-meter-demo
 
 ## 项目名称
 
-项目名称为 **Julilaoshi Token**，是一个读取本机 Codex 记录的任务用量与账户周期面板。仓库网址和已安装目录暂时沿用旧路径，确保原有链接和安装可以继续使用。
+项目名称为 **Julilaoshi Token**，是一个读取本机 Codex 记录的任务用量与账户周期面板。仓库已更名为 `julilaoshi/julilaoshi-token`，旧仓库地址自动跳转。已安装目录保留 `codex-token-meter` 以兼容已有安装，因此启动命令中仍使用这个目录名。

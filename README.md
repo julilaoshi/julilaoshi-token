@@ -41,6 +41,28 @@ right-side browser panel. Do not upload my local records or register a Skill.
 
 Manual fallback: download and extract the release ZIP, then run `python3 meter.py install` in that directory.
 
+## Opening it next time
+
+**Install once. After restarting your computer, or if the page cannot connect, run this command; no reinstall is needed:**
+
+```sh
+python3 ~/.local/share/codex-token-meter/meter.py start
+```
+
+Open the URL printed by the command. Repeating `start` reuses a running service instead of starting duplicates. Ports start at 8793; use the printed URL if that port is occupied.
+
+- **Restarting Codex:** the independent service usually stays running. Try the previous URL first; run `start` if it cannot connect.
+- **Restarting your computer:** run `start` once. No login startup is registered.
+- **Closing the panel:** once all panel tabs are closed, page-driven polling stops. The process still uses some memory and waits for requests; it has not exited.
+- **Stopping completely:** use `stop` below, then `start` when needed.
+- **File not found:** install first. For a custom installation, use its path and matching `--home` option.
+
+You can also ask Codex:
+
+> Run `python3 ~/.local/share/codex-token-meter/meter.py start`, then open its printed local URL in the right-side browser.
+
+The monitoring service makes no AI calls and consumes no model tokens. Asking Codex to operate it uses Codex normally and can consume tokens.
+
 ## Everyday commands
 
 ```sh
@@ -65,7 +87,7 @@ Input, cached input and output follow Codex's cumulative token records. Lifetime
 - Reads local task metadata and usage events; never modifies Codex files.
 - No analytics, outbound requests or model calls during normal monitoring. Installation downloads code from GitHub; normal monitoring stays local.
 - Binds only to loopback. The dashboard exposes local task titles to local clients; loopback is not a sandbox against other applications on your computer.
-- No credentials or chat content are returned to the browser. Session lines are scanned to select usage events; no conversation archive is saved by this tool.
+- No credentials or full conversations are returned to the browser. Task titles may contain sensitive information; fallback titles may derive from the first input. Review titles before sharing screenshots. Session lines are scanned to select usage events; no conversation archive is saved by this tool.
 - Honors `CODEX_HOME`. Optionally set `TOKEN_METER_EXCLUDE` to a colon-separated list of private directories before starting. Matching task directories and descendants are excluded.
 - Only locally available records are counted. Child-agent sessions are excluded. Archived tasks can appear in the ranking. Cloud-only work and other computers are not counted.
 - Running includes waiting for tools or approval. Sessions with no log changes for 30 minutes are hidden; long quiet work may also be hidden until its next log update. Stale active tasks are not reclassified as completed ranking entries.
@@ -103,4 +125,4 @@ These changes are available on `main`; the tagged one-line installer above remai
 
 ## Project name
 
-The project is named **Julilaoshi Token**. It is an independent local dashboard for Codex task usage and account-cycle history. The existing GitHub repository URL and installed folder remain compatible while the repository rename is being completed.
+The project is named **Julilaoshi Token**. It is an independent local dashboard for Codex task usage and account-cycle history. The repository is now `julilaoshi/julilaoshi-token`; the old repository URL redirects here. The installation folder remains `codex-token-meter` for compatibility, so everyday commands still use that folder name.

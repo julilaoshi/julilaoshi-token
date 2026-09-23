@@ -1,3 +1,9 @@
+# Documentation — startup and privacy
+
+- Explain restarting after a computer reboot, repeated starts, closing Codex, and stopping the service.
+- Clarify that task titles can contain sensitive text, and that asking Codex to operate the tool can consume tokens.
+- Correct the completed repository rename and explain the compatible installation folder.
+
 # Project rename — Julilaoshi Token
 
 - Rename the public-facing product from Codex Token Meter to Julilaoshi Token.
