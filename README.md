@@ -2,7 +2,7 @@
 
 **A local dashboard for Codex task usage and account cycles.**
 
-[Quick install](#quick-install) · [中文说明](README.zh-CN.md) · [Star this project](https://github.com/julilaoshi/codex-token-meter)
+[Quick install](#quick-install) · [中文说明](README.zh-CN.md) · [Star this project](https://github.com/julilaoshi/julilaoshi-token)
 
 Public v1.0.3 · Local macOS utility · Python 3.9+ · No third-party Python dependencies · No model calls
 
@@ -25,7 +25,7 @@ This is an independent community tool, not an OpenAI product. The interface curr
 Requires macOS with Python 3.9+ and local Codex session records. No sudo, subscription credentials or API key is required. Review [install.sh](install.sh) before running it.
 
 ```sh
-python3 -c 'import urllib.request, subprocess; subprocess.run(["sh"], input=urllib.request.urlopen("https://raw.githubusercontent.com/julilaoshi/codex-token-meter/v1.0.3/install.sh", timeout=30).read(), check=True)'
+python3 -c 'import urllib.request, subprocess; subprocess.run(["sh"], input=urllib.request.urlopen("https://raw.githubusercontent.com/julilaoshi/julilaoshi-token/v1.0.3/install.sh", timeout=30).read(), check=True)'
 ```
 
 The installer fetches a fixed release, verifies its SHA-256 checksum, installs into your user directory and starts the local service. Click the printed localhost URL, or ask Codex to open it in its right-side browser panel. The panel is a browser tab attached to a task, not a global extension of the Codex interface.
@@ -33,7 +33,7 @@ The installer fetches a fixed release, verifies its SHA-256 checksum, installs i
 **Prefer asking Codex? Copy this:**
 
 ```text
-Install https://github.com/julilaoshi/codex-token-meter on this Mac.
+Install https://github.com/julilaoshi/julilaoshi-token on this Mac.
 Read its README and inspect install.sh first. Install the tagged release,
 verify that the service responds, and open its printed local URL in the
 right-side browser panel. Do not upload my local records or register a Skill.
@@ -84,7 +84,7 @@ Demo mode uses hard-coded fictional data and does not read Codex records. Keep r
 
 ## Share it
 
-If this helps, [star the repository](https://github.com/julilaoshi/codex-token-meter) or share its link. [Launch copy](docs/launch-copy.md) is available in English and Chinese. No social account connection is required.
+If this helps, [star the repository](https://github.com/julilaoshi/julilaoshi-token) or share its link. [Launch copy](docs/launch-copy.md) is available in English and Chinese. No social account connection is required.
 
 [Follow the repository owner on GitHub](https://github.com/julilaoshi) for updates.
 

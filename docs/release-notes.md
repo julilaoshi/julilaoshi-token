@@ -2,7 +2,8 @@
 
 - Rename the public-facing product from Codex Token Meter to Julilaoshi Token.
 - Keep Codex in descriptive copy so users can find the local usage dashboard.
-- Preserve existing installed directory and repository links during the repository rename.
+- Rename the GitHub repository to `julilaoshi/julilaoshi-token` and update the repository description, documentation and download links.
+- Preserve the existing installation directory and service identifiers for compatibility. Existing release tags remain unchanged.
 
 # Unreleased — Period history and task names
 

@@ -13,7 +13,7 @@
 注意：展示的是本机已用 Token 的构成，不是 Pro 订阅额度百分比。
 
 macOS + Python 3.9 起步，代码已开放。欢迎试用、反馈和点 Star：
-https://github.com/julilaoshi/codex-token-meter
+https://github.com/julilaoshi/julilaoshi-token
 
 #Codex #开源工具 #Token #本地工具
 
@@ -28,7 +28,7 @@ No model calls. No runtime telemetry. No cloud dashboard. Just local records in 
 Token share means a share of locally observed usage, not a share of your subscription allowance. macOS, Python 3.9+, MIT licensed. The first interface uses Chinese labels.
 
 Try it, report issues, or leave a star:
-https://github.com/julilaoshi/codex-token-meter
+https://github.com/julilaoshi/julilaoshi-token
 
 #Codex #OpenSource #DeveloperTools
 
