@@ -1,3 +1,9 @@
+# Project rename — Julilaoshi Token
+
+- Rename the public-facing product from Codex Token Meter to Julilaoshi Token.
+- Keep Codex in descriptive copy so users can find the local usage dashboard.
+- Preserve existing installed directory and repository links during the repository rename.
+
 # Unreleased — Period history and task names
 
 - Add current/previous account-period switching and historical top-five usage ranking.

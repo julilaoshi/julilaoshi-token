@@ -4,7 +4,7 @@
 
 **Codex 同时跑几个任务，到底谁最费 Token？**
 
-我做了 Codex Token Meter，一个只在本机运行的小面板。
+我做了 Julilaoshi Token，一个只在本机运行的小面板。
 
 上面看正在工作的任务，下面看本周期最费 Token 的前五名。任务累计、周期占比、上一轮对话用量放在一条直角白条里，每三秒自动更新。
 
@@ -21,7 +21,7 @@ https://github.com/julilaoshi/codex-token-meter
 
 **Which Codex task is using the most tokens?**
 
-Codex Token Meter is a small local dashboard for active tasks and the top five other tasks in your current usage period. See cumulative tokens, period share and previous-turn usage, with automatic three-second refresh.
+Julilaoshi Token is a small local dashboard for active tasks and the top five other tasks in your current usage period. See cumulative tokens, period share and previous-turn usage, with automatic three-second refresh.
 
 No model calls. No runtime telemetry. No cloud dashboard. Just local records in a compact interface.
 

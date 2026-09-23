@@ -1,6 +1,6 @@
-# Codex Token Meter
+# Julilaoshi Token
 
-**See where your Codex tokens go. Keep the dashboard small.**
+**A local dashboard for Codex task usage and account cycles.**
 
 [Quick install](#quick-install) · [中文说明](README.zh-CN.md) · [Star this project](https://github.com/julilaoshi/codex-token-meter)
 
@@ -100,3 +100,7 @@ If this helps, [star the repository](https://github.com/julilaoshi/codex-token-m
 - Previous-period totals stop at that period’s end. History depends on available local logs; this is not billing data.
 
 These changes are available on `main`; the tagged one-line installer above remains v1.0.3. To use main, download its source ZIP and run `python3 meter.py install` in the extracted folder. No login startup is added.
+
+## Project name
+
+The project is named **Julilaoshi Token**. It is an independent local dashboard for Codex task usage and account-cycle history. The existing GitHub repository URL and installed folder remain compatible while the repository rename is being completed.

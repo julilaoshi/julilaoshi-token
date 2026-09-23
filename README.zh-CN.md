@@ -1,6 +1,6 @@
-# Codex Token Meter｜Token 计量表
+# Julilaoshi Token｜Codex Token 计量面板
 
-**看清每个任务的 Token 消耗。**
+**查看 Codex 任务用量与账户周期。**
 
 [一键安装](#一键安装) · [English](README.md) · [给项目点 Star](https://github.com/julilaoshi/codex-token-meter)
 
@@ -94,3 +94,7 @@ python3 meter.py stop --home /tmp/token-meter-demo
 - 上周期累计值截止到周期结束；历史结果依赖本机可读取记录，不是官方账单。
 
 以上更新位于 `main`；上方固定版本的一键安装仍为 v1.0.3。要使用最新版，可下载 main 源码 ZIP，解压后运行 `python3 meter.py install`。不添加登录启动项。
+
+## 项目名称
+
+项目名称为 **Julilaoshi Token**，是一个读取本机 Codex 记录的任务用量与账户周期面板。仓库网址和已安装目录暂时沿用旧路径，确保原有链接和安装可以继续使用。
